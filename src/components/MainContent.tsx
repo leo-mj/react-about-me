@@ -9,10 +9,10 @@ function MainContent(): JSX.Element {
   const numOne = 3;
   const numTwo = 6;
 
-  const threeFavouriteFoods = ["Dumplings","Chocolate", "Noodles", "Pizza"];
+  const threeFavouriteFoods = ["Dumplings", "Chocolate", "Noodles", "Pizza"];
 
-  const noun: string = "vis";
-  const verb: string = "count";
+  const noun = "vis";
+  const verb = "count";
   const sentenceStructure = ` ${noun}${verb} could ${verb} ${noun}`;
 
   return (
@@ -27,11 +27,13 @@ function MainContent(): JSX.Element {
       <section>
         <h2>Musing of the month ({location.city}, March 2003)</h2>
         <p>
-          Q: How many {noun} could a {noun}{verb} {verb} if a {sentenceStructure}?
+          Q: How many {noun} could a {noun}
+          {verb} {verb} if a {sentenceStructure}?
         </p>
         <p>
-          A: A {noun}{verb} would {verb} all the {noun} they could {verb} if a 
-           {sentenceStructure}.
+          A: A {noun}
+          {verb} would {verb} all the {noun} they could {verb} if a
+          {sentenceStructure}.
         </p>
       </section>
       <section>
