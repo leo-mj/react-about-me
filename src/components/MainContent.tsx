@@ -2,14 +2,18 @@ import { capitalise } from "../utils/capitalise";
 
 function MainContent(): JSX.Element {
   const location = {
-    city: "Kuala Lumpur",
-    country: "Malaysia",
+    city: "Oxford",
+    country: "England",
   };
 
   const numOne = 3;
   const numTwo = 6;
 
-  const threeFavouriteFoods = ["Chocolate", "Noodles", "Pizza"];
+  const threeFavouriteFoods = ["Dumplings", "Chocolate", "Noodles", "Pizza"];
+
+  const noun = "vis";
+  const verb = "count";
+  const sentenceStructure = ` ${noun}${verb} could ${verb} ${noun}`;
 
   return (
     <main>
@@ -23,12 +27,13 @@ function MainContent(): JSX.Element {
       <section>
         <h2>Musing of the month ({location.city}, March 2003)</h2>
         <p>
-          Q: How much wood could a woodchuck chuck if a woodchuck could chuck
-          wood?
+          Q: How many {noun} could a {noun}
+          {verb} {verb} if a {sentenceStructure}?
         </p>
         <p>
-          A: A woodchuck would chuck all the wood they could chuck if a
-          woodchuck would chuck wood.
+          A: A {noun}
+          {verb} would {verb} all the {noun} they could {verb} if a
+          {sentenceStructure}.
         </p>
       </section>
       <section>
@@ -57,9 +62,9 @@ function MainContent(): JSX.Element {
         <h2>Food</h2>
         <p>My favourite foods are:</p>
         <ul>
-          <li>{capitalise(threeFavouriteFoods[0])}</li>
-          <li>{capitalise(threeFavouriteFoods[1])}</li>
+          <li>{capitalise(threeFavouriteFoods[Math.floor(Math.random())])}</li>
           <li>{capitalise(threeFavouriteFoods[2])}</li>
+          <li>{capitalise(threeFavouriteFoods[3])}</li>
         </ul>
         <p>
           Please get in touch if you know any good recipes that combine{" "}
